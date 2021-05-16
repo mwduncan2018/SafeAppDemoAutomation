@@ -1,0 +1,24 @@
+Feature: Apple
+
+  Scenario: Apple Navigation to the Watch List
+    Given I open Safe App Demo
+    Given I navigate to the Watch List page
+  	Then verify the Watch List page is open
+  
+  Scenario: Add Apple product 111
+    Given I open Safe App Demo
+    Given I navigate to the Product List page
+    When I add the Apple product 111
+    Then verify the Apple product 111 has been created
+
+  Scenario: Add Apple product 22
+    Given I open Safe App Demo
+    Given I navigate to the Product List page
+    When I add the Apple product 222
+    Then verify the Apple product 222 has been created
+
+  Scenario: Add Apple product 333
+    Given I open Safe App Demo
+    Given I navigate to the Product List page
+    When I add the Apple product 333
+    Then verify the Apple product 333 has been created

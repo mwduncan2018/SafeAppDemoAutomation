@@ -1,0 +1,24 @@
+Feature: Samsung
+
+  Scenario: Samsung Navigation to the Watch List
+    Given I open Safe App Demo
+    Given I navigate to the Watch List page
+  	Then verify the Watch List page is open
+  
+  Scenario: Add Samsung product AAA
+    Given I open Safe App Demo
+    Given I navigate to the Product List page
+    When I add the Samsung product AAA
+    Then verify the Samsung product AAA has been created
+
+  Scenario: Add Samsung product BBB
+    Given I open Safe App Demo
+    Given I navigate to the Product List page
+    When I add the Samsung product BBB
+    Then verify the Samsung product BBB has been created
+
+  Scenario: Add Samsung product CCC
+    Given I open Safe App Demo
+    Given I navigate to the Product List page
+    When I add the Samsung product CCC
+    Then verify the Samsung product CCC has been created

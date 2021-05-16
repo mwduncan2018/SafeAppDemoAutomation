@@ -1,0 +1,24 @@
+Feature: Motorola
+
+  Scenario: Motorola Navigation to the Watch List
+    Given I open Safe App Demo
+    Given I navigate to the Watch List page
+  	Then verify the Watch List page is open
+  
+  Scenario: Add Motorola product XXX
+    Given I open Safe App Demo
+    Given I navigate to the Product List page
+    When I add the Motorola product XXX
+    Then verify the Motorola product XXX has been created
+
+  Scenario: Add Motorola product YYY
+    Given I open Safe App Demo
+    Given I navigate to the Product List page
+    When I add the Motorola product YYY
+    Then verify the Motorola product YYY has been created
+
+  Scenario: Add Motorola product ZZZ
+    Given I open Safe App Demo
+    Given I navigate to the Product List page
+    When I add the Motorola product ZZZ
+    Then verify the Motorola product ZZZ has been created
