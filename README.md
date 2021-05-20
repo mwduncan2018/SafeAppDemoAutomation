@@ -1,6 +1,6 @@
 # SafeAppDemoAutomation
 
-### Page Factory Annotations
+## Page Factory Annotations
 ##### AND CONDITION
 @FindBys({
   @FindBy(class="highlight-row"),
@@ -13,7 +13,7 @@
   @FindBy(className="btn-warning")
 })
 
-### Picocontainer - Sharing Test State Between Step Definitions
+## Picocontainer - Sharing Test State Between Step Definitions
 ##### Sharing state between step definitions can be done using picocontainer (http://www.thinkcode.se/blog/2017/04/01/sharing-state-between-steps-in-cucumberjvm-using-picocontainer). Picocontainer will invisibly handle the dependency injection that allows shared state among steps. To use picocontainer, do the following.
 ##### 1) Create a ScenarioContext class
 ##### 2) Each step definition class has a private ScenarioContext class.
