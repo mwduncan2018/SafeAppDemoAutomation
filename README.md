@@ -1,18 +1,17 @@
 # SafeAppDemoAutomation
 ###### This is test automation of a C# .NET CORE MVC website using Java, Selenium WebDriver, Selenium's Page Factory annotations, Behavior-Driven Development (BDD), Cucumber, and RestAssured.
-
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
 ## Page Factory Annotations
 ###### AND CONDITION
-@FindBys({
-  @FindBy(class="highlight-row"),
-  @FindBy(id="warzone")
-})
+###### @FindBys({ @FindBy(class="highlight-row"), @FindBy(id="warzone") })
 ###### OR CONDITION
-@FindAll({
-  @FindBy(name="blackops"),
-  @FindBy(id="mw3"),
-  @FindBy(className="btn-warning")
-})
+###### @FindAll({ @FindBy(name="blackops"), @FindBy(id="mw3"), @FindBy(className="btn-warning") })
 
 ## Picocontainer - Sharing Test State Between Step Definitions
 ###### Sharing state between step definitions can be done using picocontainer (http://www.thinkcode.se/blog/2017/04/01/sharing-state-between-steps-in-cucumberjvm-using-picocontainer). Picocontainer will invisibly handle the dependency injection that allows shared state among steps. To use picocontainer, do the following.
