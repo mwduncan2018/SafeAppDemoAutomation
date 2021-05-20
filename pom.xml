@@ -107,7 +107,8 @@
 					<version>2.19.1</version>
 					<configuration>
 						<parallel>methods</parallel>
-						<useUnlimitedThreads>true</useUnlimitedThreads>
+						<threadCount>4</threadCount>
+						<!--  <useUnlimitedThreads>true</useUnlimitedThreads>  -->
 						<properties>
 							<configurationParameters>
 								junit.jupiter.conditions.deactivate = *
