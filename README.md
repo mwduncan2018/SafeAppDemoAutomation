@@ -9,8 +9,8 @@
 ```diff
 + @FindAll({ @FindBy(name="blackops"), @FindBy(id="mw3"), @FindBy(className="btn-warning") })
 ```
-## Picocontainer - Scenario Context
-###### Sharing test state between step definitions can be done using picocontainer (http://www.thinkcode.se/blog/2017/04/01/sharing-state-between-steps-in-cucumberjvm-using-picocontainer). Picocontainer will invisibly handle the dependency injection that allows shared state among steps. To use picocontainer, do the following.
+## Scenario Context
+###### Sharing test state between step definitions can be done using picocontainer (http://www.thinkcode.se/blog/2017/04/01/sharing-state-between-steps-in-cucumberjvm-using-picocontainer). Picocontainer will invisibly handle the dependency injection that allows shared state between the steps of a scenario. To use picocontainer, do the following.
 ###### 1) Create a ScenarioContext class
 ###### 2) Each step definition class has a private ScenarioContext class.
 ###### 3) Each step definition class has a constructor that takes ScenarioContext as a parameter and assigns it to the private ScenarioContext.
@@ -21,6 +21,12 @@
 			<version>6.10.3</version>
 			<scope>test</scope>
 		</dependency>
+
+## Test Context
+###### Sharing test state between all tests can be accomplished with a TestContext class with methods that are all static. During parallel test exucution, Cucumber runs a thread for each feature file. For thread safety in the TestContext class, use a ConcurrentHashMap<String,Object> to store data throughout the test run.
+
+## Cucumber "Before Each Scenario" and "After Each Scenario" Hooks
+######
 
 ## Page-Object Model
 ###### Implement the Page-Object Model by following three rules.
