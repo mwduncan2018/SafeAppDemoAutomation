@@ -21,3 +21,11 @@
 			<version>6.10.3</version>
 			<scope>test</scope>
 		</dependency>
+
+## Page-Object Model
+###### Implement the Page-Object Model by following three rules.
+```diff
+! 1) For each GUI page in the app, create a corresponding class.
+! 2) For each action/verification on the GUI page, create a method in the class.
+! 3) Store GUI element location strategies as private member data in the class.
+```
