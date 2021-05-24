@@ -25,9 +25,6 @@
 ## Test Context - ConcurrentHashMap<String,Object>
 ###### Sharing test state between all tests can be accomplished with a TestContext class with methods that are all static. During parallel test exucution, Cucumber runs a thread for each feature file. For thread safety in the TestContext class, use a ConcurrentHashMap<String,Object> to store data throughout the test run.
 
-## Cucumber "Before Each Scenario" and "After Each Scenario" Hooks
-######
-
 ## Page-Object Model
 ###### Implement the Page-Object Model by following three rules.
 ```diff
@@ -35,3 +32,7 @@
 ! 2) For each action/verification on the GUI page, create a method in the class.
 ! 3) Store GUI element location strategies as private member data in the class.
 ```
+
+## Cucumber "Before Each Scenario" and "After Each Scenario" Hooks
+######
+
