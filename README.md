@@ -37,12 +37,10 @@
 ## HTML Report
 ###### Use the following @CucumberOption for the HTML report.
 
-@CucumberOptions(plugin = { "pretty", "html:target/Destination", "json:target/cucumber.json" },
-		// "html:target/Destination" puts the HTML report in 'target/Destination'
-		// "json:target/cucumber.json" puts the JSON report in 'target/cucumber.json'
-		monochrome = true, snippets = SnippetType.UNDERSCORE,
-		features = "src/test/resources")
-		//features = "classpath:features")
+		@CucumberOptions(plugin = { "pretty", "html:target/Destination", "json:target/cucumber.json" },
+			monochrome = true, snippets = SnippetType.UNDERSCORE,
+			features = "src/test/resources")
+		public class RunCucumberTest { ... }
 
 ## Cucumber "Before Each Scenario" and "After Each Scenario" Hooks
 ###### These test hooks go in the Hooks.java file.
@@ -52,4 +50,8 @@
 ! @After(order=1)
 ```
 ## Cucumber "Before All" and "After All" Hooks
-###### Use the JUnit @BeforeClass and @AfterClass annotations in the RunCucumberTest.java file.
+###### Within the RunCucumberTest.java file, use the JUnit annotations for "Before All" and "After All"
+```diff
++ @BeforeClass
++ @AfterClass
+```
