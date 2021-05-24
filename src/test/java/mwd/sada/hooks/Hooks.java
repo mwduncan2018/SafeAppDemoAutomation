@@ -18,7 +18,7 @@ public class Hooks {
 	@Before(order = 99)
 	public void beforeScenario() {
 		WebDriver driver = WebDriverManager.getDriver();
-		driver.navigate().to(new ConfigurationProperties().getUrl());
+		driver.navigate().to(ConfigurationProperties.getUrl());
 		scenarioContext.getContextBag().put("driver", driver);
 	}
 
