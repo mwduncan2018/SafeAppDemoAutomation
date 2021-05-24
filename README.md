@@ -2,7 +2,8 @@
 ###### This is test automation of a C# .NET CORE MVC website using Java, Selenium WebDriver, Selenium's Page Factory annotations, Behavior-Driven Development (BDD), Cucumber, and RestAssured.
 
 ## Selenium WebDriver
-###### Selenium client libraries exist in many languages (C#, Java, Python, Ruby, JS, etc.). When executed, those libraries send JSON to a server running locally. That server is called a webdriver and it knows how to take that JSON and turn it into actions on a browser. Each browser has a specific webdriver. Geckodriver is the webdriver for Firefox. Chromedriver is the webdriver for Chrome. Webdrivers exist for Safari, Internet Explorer, Edge, and Opera also.
+###### Selenium client libraries exist in many languages (C#, Java, Python, Ruby, JS, etc.). When executed, those libraries send JSON to a server running locally. That server is called a webdriver and it knows how to take that JSON and turn it into actions on a browser. Each browser has a specific webdriver. Geckodriver is the webdriver for Firefox. Chromedriver is the webdriver for Chrome. Webdrivers exist for Safari, Internet Explorer, Edge, and Opera also. You should put the executable webdriver in a folder that is on the PATH environment variable so Selenium can find it easily.
+
 ###### Selenium locates GUI elements by:
 ```diff
 + CSS Selector
