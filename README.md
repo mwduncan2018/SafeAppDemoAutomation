@@ -1,5 +1,14 @@
 # SafeAppDemoAutomation
 ###### This is test automation of a C# .NET CORE MVC website using Java, Selenium WebDriver, Selenium's Page Factory annotations, Behavior-Driven Development (BDD), Cucumber, and RestAssured.
+
+## Page-Object Model
+###### Implement the Page-Object Model by following three rules.
+```diff
+! 1) For each GUI page in the app, create a corresponding class.
+! 2) For each action/verification on the GUI page, create a method in the class.
+! 3) Store GUI element location strategies as private member data in the class.
+```
+
 ## Page Factory Annotations
 ###### AND CONDITION
 ```diff
@@ -26,22 +35,6 @@
 ###### Sharing test state between all scenarios can be accomplished with a TestContext class with methods that are all static.
 ###### During parallel test execution, Cucumber runs a thread for each feature file. For thread safety in the TestContext class, use a ConcurrentHashMap<String,Object> to store data throughout the test run.
 
-## Page-Object Model
-###### Implement the Page-Object Model by following three rules.
-```diff
-! 1) For each GUI page in the app, create a corresponding class.
-! 2) For each action/verification on the GUI page, create a method in the class.
-! 3) Store GUI element location strategies as private member data in the class.
-```
-
-## HTML Report
-###### Use the following @CucumberOption for the HTML report.
-
-		@CucumberOptions(plugin = { "pretty", "html:target/Destination", "json:target/cucumber.json" },
-			monochrome = true, snippets = SnippetType.UNDERSCORE,
-			features = "src/test/resources")
-		public class RunCucumberTest { ... }
-
 ## Cucumber "Before Each Scenario" and "After Each Scenario" Hooks
 ###### These test hooks go in the Hooks.java file.
 ###### Multiple hook methods can occur before each scenario and after each scenario. Control the order of test hook execution with an annotation on hooks like the example below. @Before order starts execution at 1 and the goes up. @After order starts execution at 9999 and goes down to 1.
@@ -55,3 +48,10 @@
 + @BeforeClass
 + @AfterClass
 ```
+## HTML Report
+###### Use the following @CucumberOption for the HTML report.
+
+		@CucumberOptions(plugin = { "pretty", "html:target/Destination", "json:target/cucumber.json" },
+			monochrome = true, snippets = SnippetType.UNDERSCORE,
+			features = "src/test/resources")
+		public class RunCucumberTest { ... }
