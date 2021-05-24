@@ -34,10 +34,22 @@
 ! 3) Store GUI element location strategies as private member data in the class.
 ```
 
+## HTML Report
+###### Use the following @CucumberOption for the HTML report.
+
+@CucumberOptions(plugin = { "pretty", "html:target/Destination", "json:target/cucumber.json" },
+		// "html:target/Destination" puts the HTML report in 'target/Destination'
+		// "json:target/cucumber.json" puts the JSON report in 'target/cucumber.json'
+		monochrome = true, snippets = SnippetType.UNDERSCORE,
+		features = "src/test/resources")
+		//features = "classpath:features")
+
 ## Cucumber "Before Each Scenario" and "After Each Scenario" Hooks
-###### Test hooks go in the Hooks.java file.
+###### These test hooks go in the Hooks.java file.
 ###### Multiple hook methods can occur before each scenario and after each scenario. Control the order of test hook execution with an annotation on hooks like the example below. @Before order starts execution at 1 and the goes up. @After order starts execution at 9999 and goes down to 1.
 ```diff
 ! @Before(order=99)
 ! @After(order=1)
 ```
+## Cucumber "Before All" and "After All" Hooks
+###### Use the JUnit @BeforeClass and @AfterClass annotations in the RunCucumberTest.java file.
