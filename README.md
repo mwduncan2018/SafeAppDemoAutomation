@@ -12,10 +12,8 @@
 ## Scenario Context - Picocontainer
 ###### Sharing test state between step definitions and test hooks ("before each scenario" and "after each scenario") for each individual scenario can be done using picocontainer (http://www.thinkcode.se/blog/2017/04/01/sharing-state-between-steps-in-cucumberjvm-using-picocontainer). Picocontainer will invisibly handle the dependency injection that allows shared state between the steps of a scenario. To use picocontainer, do the following.
 ###### 1) Create the ScenarioContext class. This class contains a HashMap<String,Object> for the step definitions to store scenario state.
-###### 2) Each step definition class has a private ScenarioContext class.
-###### 3) Each step definition class has a constructor that takes ScenarioContext as a parameter and assigns it to the private ScenarioContext.
-###### 4) The Hooks class a private ScenarioContext class.
-###### 5) The Hooks class has a constructor that takes ScenarioContext as a parameter and assigns it to the private ScenarioContext.
+###### 2) Each step definition class has a private ScenarioContext class. Each step definition class has a constructor that takes ScenarioContext as a parameter and assigns it to the private ScenarioContext.
+###### 3) The Hooks class a private ScenarioContext class.The Hooks class has a constructor that takes ScenarioContext as a parameter and assigns it to the private ScenarioContext.
 ###### 4) Put picocontainer in the pom.xml file.
 		<dependency>
 			<groupId>io.cucumber</groupId>
