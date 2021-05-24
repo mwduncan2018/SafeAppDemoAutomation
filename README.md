@@ -27,13 +27,16 @@
 ```
 
 ## Page Factory Annotations
+###### Annotations are available to allow multiple strategies to locate each GUI element.
 ###### AND CONDITION
 ```diff
-- @FindBys({ @FindBy(class="highlight-row"), @FindBy(id="warzone") })
+- @FindBys({ @FindBy(class="submit-me"), @FindBy(id="btnSubmit") })
+- private WebElement SUBMIT_BUTTON;
 ```
 ###### OR CONDITION
 ```diff
 + @FindAll({ @FindBy(name="blackops"), @FindBy(id="mw3"), @FindBy(className="btn-warning") })
++ private WebElement BLACK_OPS_BUTTON;
 ```
 ## Scenario Context - Picocontainer
 ###### Sharing test state between step definitions and test hooks ("before each scenario" and "after each scenario") for each individual scenario can be done using picocontainer (http://www.thinkcode.se/blog/2017/04/01/sharing-state-between-steps-in-cucumberjvm-using-picocontainer). Picocontainer will invisibly handle the dependency injection that allows shared state between the steps of a scenario. To use picocontainer, do the following.
