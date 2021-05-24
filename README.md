@@ -15,6 +15,8 @@
 + XPATH
 + Tag
 ```
+###### After Selenium locates a GUI element, there are methods to trigger events on the GUI element (e.g. click, submit, etc.) and methods to pull data from the GUI element (text, attribute values, etc.).
+
 
 ## Page-Object Model
 ###### Implement the Page-Object Model by following three rules.
