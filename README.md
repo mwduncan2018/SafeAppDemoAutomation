@@ -50,7 +50,7 @@
 ! @After(order=1)
 ```
 ## Cucumber "Before All" and "After All" Hooks
-###### Within the RunCucumberTest.java file, use the JUnit annotations for "Before All" and "After All"
+###### Within the RunCucumberTest.java file, use the JUnit annotations for "Before All" and "After All".
 ```diff
 + @BeforeClass
 + @AfterClass
