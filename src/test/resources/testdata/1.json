@@ -1,0 +1,20 @@
+{
+  "products" : [ {
+    "manufacturer" : "Gibson",
+    "model" : "Les Paul",
+    "price" : "2000",
+    "numberInStock" : "5"
+  }, {
+    "manufacturer" : "Fender",
+    "model" : "Telecaster",
+    "price" : "1500",
+    "numberInStock" : "3"
+  } ],
+  "watchListEntries" : [ {
+    "manufacturer" : "ESP",
+    "model" : "Alexi"
+  }, {
+    "manufacturer" : "ESP",
+    "model" : "Alexi"
+  } ]
+}

@@ -1,4 +1,4 @@
-package mwd.sada.pomframework;
+package mwd.sada.pageobjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

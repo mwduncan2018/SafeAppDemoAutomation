@@ -10,7 +10,7 @@ Feature: Motorola
     Given I navigate to the Product List page
     When I add the Motorola product XXX
     Then verify the Motorola product XXX has been created
-
+    
   Scenario: Add Motorola product YYY
     Given I open Safe App Demo
     Given I navigate to the Product List page

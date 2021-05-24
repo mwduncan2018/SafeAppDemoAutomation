@@ -1,19 +1,18 @@
 package mwd.sada;
 
-import java.util.concurrent.TimeUnit;
-
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.CucumberOptions.SnippetType;
-import mwd.sada.pomframework.AdminPage;
+import mwd.sada.context.TestContext;
+import mwd.sada.dataprovider.ConfigurationProperties;
+import mwd.sada.managers.WebDriverManager;
+import mwd.sada.pageobjects.AdminPage;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(plugin = { "pretty", "html:target/Destination", "json:target/cucumber.json" },
@@ -29,10 +28,10 @@ public class RunCucumberTest {
 		System.out.println("*******************************************");
 		System.out.println("GLOBAL SETUP");
 		System.out.println("*******************************************");
-		WebDriver driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(15000, TimeUnit.MILLISECONDS);
-		driver.manage().window().setSize(new Dimension(1000, 1000));
-		driver.navigate().to("http://192.168.1.12:10081/ProductList");
+
+		TestContext.getContextBag().put("Start!", 1);
+		WebDriver driver = WebDriverManager.getDriver();
+		driver.navigate().to(ConfigurationProperties.getUrl());
 		PageFactory.initElements(driver, AdminPage.class).resetDatabase();
 		driver.close();
 	}

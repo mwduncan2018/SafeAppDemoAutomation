@@ -97,6 +97,28 @@
 			<version>4.0.0-alpha-1</version>
 		</dependency>
 
+		<!-- FASTER JSON & XML with JACKSON! -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.10.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>2.10.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.10.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+			<version>2.9.0</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -108,7 +130,7 @@
 					<configuration>
 						<parallel>methods</parallel>
 						<threadCount>4</threadCount>
-						<!--  <useUnlimitedThreads>true</useUnlimitedThreads>  -->
+						<!-- <useUnlimitedThreads>true</useUnlimitedThreads> -->
 						<properties>
 							<configurationParameters>
 								junit.jupiter.conditions.deactivate = *

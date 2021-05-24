@@ -2,8 +2,9 @@ package mwd.sada.steps;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
-import mwd.sada.pomframework.ProductListPage;
-import mwd.sada.pomframework.WatchListPage;
+import mwd.sada.context.ScenarioContext;
+import mwd.sada.pageobjects.ProductListPage;
+import mwd.sada.pageobjects.WatchListPage;
 import io.cucumber.java.en.Then;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -17,39 +18,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import io.cucumber.java.en.And;
 
-public class StepDefinitionsA {
+public class PhoneSteps {
 
 	private ScenarioContext scenarioContext;
 
-	public StepDefinitionsA(ScenarioContext scenarioContext) {
+	public PhoneSteps(ScenarioContext scenarioContext) {
 		this.scenarioContext = scenarioContext;
-	}
-
-	@Given("I open Safe App Demo")
-	public void iOpenSafeAppDemo() {
-	}
-
-	@Given("I navigate to the Product List page")
-	public void iNavigateToTheProductListPage() {
-		ProductListPage productListPage;
-		WatchListPage watchListPage;
-		WebDriver driver = (WebDriver) scenarioContext.getContextBag().get("driver");
-		productListPage = PageFactory.initElements(driver, ProductListPage.class);
-		watchListPage = PageFactory.initElements(driver, WatchListPage.class);
-		productListPage.goTo();
-		watchListPage.goTo();
-		productListPage.goTo();
-		watchListPage.goTo();
-		productListPage.goTo();
-		watchListPage.goTo();
-		productListPage.goTo();
-		watchListPage.goTo();
-		productListPage.goTo();
-		watchListPage.goTo();
-		productListPage.goTo();
-		watchListPage.goTo();
-		productListPage.goTo();
-		watchListPage.goTo();		
 	}
 
 	@When("I add the Samsung product BBB")
@@ -117,19 +91,59 @@ public class StepDefinitionsA {
 
 	}
 
-	@When("I add a product with manufacturer \"([^\"]*)\" model \"([^\"]*)]\" price \"([^\"]*)\" and numberInStock \"([^\"]*)\"")
-	public void iAddAProduct(String manufacturer, String model, String price, String numberInStock) {
+	@When("I add the Samsung product AAA")
+	public void iAddTheSamsungProductAAA() {
 
 	}
 
-	@Then("verify the product manufacturer {string} model {string} price {string} and numberInStock {string} has been created")
-	public void verifyTheProductHasBeenCreated(String manufacturer, String model, String price, String numberInStock) {
-		assertEquals(true, true);
+	@When("I add the Samsung product CCC")
+	public void iAddTheSamsungProductCCC() {
+
 	}
 
-	@Then("verify the Watch List page is open")
-	public void verifyTheWatchListPageIsOpen() {
-		assertEquals(true, true);
+	@When("I add the Apple product 111")
+	public void iAddTheAppleProduct111() {
+
 	}
 
+	@When("I add the Apple product 222")
+	public void iAddTheAppleProduct222() {
+
+	}
+
+	@When("I add the Apple product 333")
+	public void iAddTheAppleProduct333() {
+
+	}
+
+	@When("I add the Motorola product XXX")
+	public void iAddTheMotorolaProductXXX() {
+
+	}
+
+	@When("I add the Motorola product YYY")
+	public void iAddTheMotorolaProductYYY() {
+
+	}
+
+	@Then("verify the Motorola product ZZZ has been created")
+	public void verifyTheMotorolaProductZZZHasBeenCreated() {
+
+	}
+
+	@Then("verify the Samsung product AAA has been created")
+	public void verifyTheSamsungProductAAAHasBeenCreated() {
+
+	}
+
+	@Then("verify the Samsung product BBB has been created")
+	public void verifyTheSamsungProductBBBHasBeenCreated() {
+
+	}
+
+	@Then("verify the Samsung product CCC has been created")
+	public void verifyTheSamsungProductCCCHasBeenCreated() {
+
+	}
+	
 }

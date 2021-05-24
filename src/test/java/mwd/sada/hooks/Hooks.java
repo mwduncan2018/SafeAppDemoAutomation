@@ -1,14 +1,12 @@
 package mwd.sada.hooks;
 
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import mwd.sada.steps.ScenarioContext;
+import mwd.sada.context.ScenarioContext;
+import mwd.sada.dataprovider.ConfigurationProperties;
+import mwd.sada.managers.WebDriverManager;
 
 public class Hooks {
 	private ScenarioContext scenarioContext;
@@ -19,10 +17,8 @@ public class Hooks {
 
 	@Before(order = 99)
 	public void beforeScenario() {
-		WebDriver driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(15000, TimeUnit.MILLISECONDS);
-		driver.manage().window().setSize(new Dimension(1000, 1400));
-		driver.navigate().to("http://192.168.1.12:10081/ProductList");
+		WebDriver driver = WebDriverManager.getDriver();
+		driver.navigate().to(new ConfigurationProperties().getUrl());
 		scenarioContext.getContextBag().put("driver", driver);
 	}
 
